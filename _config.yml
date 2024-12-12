@@ -1,11 +1,11 @@
 # Uncomment the following lines to configure a custom domain
-#domain:
-#url:
-#baseurl:
+domain: tmshader.me
+url: https://tmshader.me
+baseurl: /wishlist-template
 
 # Uncomment the following lines to configure umami analytics
-#umami_url:
-#umami_id:
+umami_url: https://tardis.tmshader.me/door-creak
+umami_id: 8e7fbf9c-2fcf-4c46-bcb7-b1a593a1031f
 
 # Set to "false" to disable snow effect
 snow: true
