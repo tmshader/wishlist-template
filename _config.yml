@@ -1,0 +1,11 @@
+# Uncomment the following lines to configure a custom domain
+#domain:
+#url:
+#baseurl:
+
+# Uncomment the following lines to configure umami analytics
+#umami_url:
+#umami_id:
+
+# Set to "false" to disable snow effect
+snow: true
