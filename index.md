@@ -12,7 +12,7 @@ wishlist:
     description: Blue as the sky
     tags: [round, chocolate]
     link: https://en.wikipedia.org/wiki/Blue
-    image: /assets/images/blue.png
+    image: assets/images/blue.png
     favourite: true
 
   - title: Red Chocolate
@@ -21,7 +21,7 @@ wishlist:
     description: Red as a strawberry
     tags: [square, chocolate]
     link: https://en.wikipedia.org/wiki/Red
-    image: /assets/images/red.png
+    image: assets/images/red.png
     favourite: true
 
   - title: Orange Chocolate
@@ -30,7 +30,7 @@ wishlist:
     description: Wait... that's not chocolate!
     tags: [round, chocolate]
     link: https://en.wikipedia.org/wiki/Orange
-    image: /assets/images/orange.png
+    image: assets/images/orange.png
     favourite: false
 
   - title: Green Chocolate
@@ -39,7 +39,7 @@ wishlist:
     description: Green as the grass
     tags: [square, chocolate]
     link: https://en.wikipedia.org/wiki/Green
-    image: /assets/images/green.png
+    image: assets/images/green.png
     favourite: false
 
 categories:
