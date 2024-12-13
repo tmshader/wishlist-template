@@ -7,5 +7,19 @@ baseurl: /wishlist-template
 umami_url: https://tardis.tmshader.me/door-creak
 umami_id: 8e7fbf9c-2fcf-4c46-bcb7-b1a593a1031f
 
-# Set to "false" to disable snow effect
+# Set to "false" to disable the snow effect
 snow: true
+
+# This controls the opacity of the snowflakes
+snow-opacity: 80%
+
+# When set to "true" the snow effect appears behind the main content
+# (The effect may not be visible on phones with this option enabled)
+snow-behind: false
+
+# If you disable this option, all snowflakes will have equal size
+snow-variance: true
+
+# This controls the variance of the snowflake sizes
+# Use values from 0 to 1 (Example: 0.2)
+snow-variance-amount: 0.2

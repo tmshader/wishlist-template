@@ -2,9 +2,39 @@
     /* customizable snowflake styling */
     .snowflake {
         color: #fff;
-        font-size: 3em;
         font-family: Arial, sans-serif;
         text-shadow: 0 0 5px #05a;
+    }
+
+    {% if site.snow-variance == true %}
+    .snowflake.snow-0 {
+        font-size: calc(3em * calc(1 - {{ site.snow-variance-amount | default: "0.2" }}));
+    }
+
+    .snowflake.snow-1 {
+        font-size: 3em;
+    }
+
+    .snowflake.snow-2 {
+        font-size: calc(3em * calc(1 + {{ site.snow-variance-amount | default: "0.2" }}));
+    }
+
+    @media (min-width: 768px) {
+        .snowflake.snow-0 {
+            font-size: calc(3em * calc(1 - {{ site.snow-variance-amount | default: "0.2" }}));
+        }
+
+        .snowflake.snow-1 {
+            font-size: 4em;
+        }
+
+        .snowflake.snow-2 {
+            font-size: calc(4em * calc(1 + {{ site.snow-variance-amount | default: "0.2" }}));
+        }
+    }
+    {% else %}
+    .snowflake {
+        font-size: 3em;
     }
 
     @media (min-width: 768px) {
@@ -12,6 +42,7 @@
             font-size: 4em;
         }
     }
+    {% endif %}
 
     .snowflake,
     .snowflake .inner {
@@ -43,7 +74,12 @@
     .snowflake {
         position: fixed;
         top: -10%;
+        opacity: {{ site.snow-opacity }};
+        {% if site.snow-behind == true %}
+        z-index: -9999;
+        {% else %}
         z-index: 9999;
+        {% endif %}
         -webkit-user-select: none;
         user-select: none;
         cursor: default;
@@ -156,17 +192,17 @@
 </style>
 <div class="snowflakes" aria-hidden="true">
     {% for i in (1..4) %}
-    <div class="snowflake">
+    <div class="snowflake{% if site.snow-variance == true %} snow-{{ i | modulo: 3 }}{% endif %}">
         <div class="inner">&#10052;</div>
     </div>
     {% endfor %}
     {% for i in (5..8) %}
-    <div class="snowflake">
+    <div class="snowflake{% if site.snow-variance == true %} snow-{{ i | modulo: 3 }}{% endif %}">
         <div class="inner">&#10053;</div>
     </div>
     {% endfor %}
     {% for i in (9..12) %}
-    <div class="snowflake">
+    <div class="snowflake{% if site.snow-variance == true %} snow-{{ i | modulo: 3 }}{% endif %}">
         <div class="inner">&#10054;</div>
     </div>
     {% endfor %}
