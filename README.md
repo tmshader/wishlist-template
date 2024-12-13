@@ -10,6 +10,13 @@ The page is build with Github Actions so you don't have to worry about that.
 
 1. The first thing to take a look at is `_config.yml` where you can configure your website domain, the snow effect and whether you'd like to track the website traffic with Umami.
 
+    The snow effect has quite a few configuration options and they are all explained in the config file. Here is the list of things you can configure about the snow effect:
+
+      - Enable or disable the effect
+      - The opacity of the effect
+      - Whether to have it in front of or behind the main content
+      - The amount of variance between the sizes of the snowflakes
+
 2. Next you have to edit `index.md` which contains your wishlist!
 
     You only need to edit between the `---` characters.
